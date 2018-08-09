@@ -6,6 +6,7 @@ import React from 'react';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = { query: '' };
   }
 
@@ -14,7 +15,7 @@ class SearchBar extends React.Component {
       <div className="search-bar">
         <input 
           value={this.state.query}
-          onChange={ event =>  this.onInputChange(event.target.value) } 
+          onChange={event =>  this.onInputChange(event.target.value)} 
         />
       </div>
     );
@@ -22,7 +23,7 @@ class SearchBar extends React.Component {
 
   // event handler
   onInputChange(query) {
-    this.setState({ query });
+    this.setState({query});
     this.props.onSearchQueryChange(query);
   }
 }
