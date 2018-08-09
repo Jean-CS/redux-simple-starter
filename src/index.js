@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   videoSearch(query) {
-    YTSearch({key: API_KEY, query: query}, (videos) => {
+    YTSearch({key: API_KEY, term: query}, (videos) => {
       this.setState({ 
         videos: videos, 
         selectedVideo: videos[0]
