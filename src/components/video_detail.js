@@ -7,7 +7,6 @@ const VideoDetail = (props) => {
 
   const videoId = props.video.id.videoId;
   const url = `https://www.youtube.com/embed/${videoId}`;
-  console.log(props.video);
 
   return (
     <div className="video-detail col-md-8">
